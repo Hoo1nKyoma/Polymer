@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Polymer</title>
+  <style>
+    #title {
+      margin: 4px 0;
+    }
+    #tab {
+      padding: 0;
+    }
+    #tab li {
+      list-style: none;
+    }
+    #tab li a {
+      display: inline-block;
+      padding: 10px;
+      color: hotpink;
+    }
+    #main a {
+      display: flex;
+      align-items: center;
+      height: 70px;
+      color: #000;
+      border-bottom: 1px solid;
+      text-decoration: none;
+    }
+    #main a:first-child {
+      border-top: 1px solid;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title">Polymer</h1>
+  <ul id="tab">
+    <li>
+      cnode
+      <a data-query='{"asset": "cnode", "tab": "all"}'>全部</a>
+      <a data-query='{"asset": "cnode", "tab": "job"}'>招聘</a>
+    </li>
+    <li>
+      v2ex
+      <a data-query='{"asset": "v2ex", "tab": "tech"}'>技术</a>
+      <a data-query='{"asset": "v2ex", "tab": "creative"}'>创意</a>
+      <a data-query='{"asset": "v2ex", "tab": "play"}'>好玩</a>
+      <a data-query='{"asset": "v2ex", "tab": "apple"}'>apple</a>
+      <a data-query='{"asset": "v2ex", "tab": "jobs"}'>酷工作</a>
+      <a data-query='{"asset": "v2ex", "tab": "deals"}'>交易</a>
+      <a data-query='{"asset": "v2ex", "tab": "city"}'>城市</a>
+      <a data-query='{"asset": "v2ex", "tab": "qna"}'>问与答</a>
+      <a data-query='{"asset": "v2ex", "tab": "hot"}'>最热</a>
+    </li>
+    <li>
+      <a data-query='{"asset": "juejin"}'>掘金</a>
+    </li>
+    <li>
+      知乎
+      <a data-query='{"asset": "zhihu", "tab": "total"}'>全部</a>
+      <a data-query='{"asset": "zhihu", "tab": "digital"}'>数码</a>
+    </li>
+    <li>
+      <a data-query='{"asset": "weibo"}'>微博</a>
+    </li>
+  </ul>
+
+  <main id="main">
+  </main>
+
+  <script>
+    const main = document.querySelector('#main')
+    const tab = document.querySelector('#tab')
+
+    const globalData = {
+      loading: false,
+      topics: [],
+      error: ''
+    }
+
+    ;(function createObserver () {
+      let _loading, _topics, _error
+
+      Object.defineProperties(globalData, {
+        loading: {
+          set: function (loading) {
+            _loading = loading
+            if (_loading) {
+              main.innerHTML = 'loading...'
+            }
+          },
+          get: function () {
+            return _loading
+          }
+        },
+        topics: {
+          set: function (topics) {
+            _topics =  topics
+            if (_topics.length === 0) {
+              main.innerHTML = '刷完了啊，滚'
+            } else {
+              main.innerHTML = _topics.map(topic => {
+                return `<a href="${topic.Link}" target="__blank">${topic.Title}</a>`
+              }).join('')
+            }
+          },
+          get: function () {
+            return _topics
+          }
+        },
+        error: {
+          set: function (error) {
+            _error = error
+            if (_error) {
+              main.innerHTML = _error
+            }
+          },
+          get: function () {
+            return _error
+          }
+        }
+      })
+    })()
+
+    tab.addEventListener('click', el => {
+      let query = (el.target.dataset || {}).query
+      if (!query) return
+      query = JSON.parse(query)
+      globalData.loading = true
+      fetch(`/topics?asset=${query.asset}&tab=${query.tab}`)
+        .then(response => {
+          return response.json()
+        })
+        .then(data => {
+          if (Array.isArray(data)) {
+            return globalData.topics = data
+          } else {
+            return new Error(data)
+          }
+        })
+        .catch(err => {
+          globalData.error = err
+        })
+        .finally(() => {
+          globalData.loading = false
+        })
+    })
+  </script>
+</body>
+</html>

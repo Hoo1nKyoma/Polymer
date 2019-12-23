@@ -1,0 +1,19 @@
+# curl 'https://m.weibo.cn/api/container/getIndex?containerid=106003type%3D25%26t%3D3%26disable_hot%3D1%26filter_type%3Drealtimehot&title=%E5%BE%AE%E5%8D%9A%E7%83%AD%E6%90%9C&extparam=pos%3D0_0%26mi_cid%3D100103%26cate%3D10103%26filter_type%3Drealtimehot%26c_type%3D30%26display_time%3D1575949167&luicode=10000011&lfid=231583' -H 'sec-fetch-mode: cors' -H 'x-xsrf-token: 73103e' -H 'accept-language: zh-CN,zh;q=0.9' -H 'x-requested-with: XMLHttpRequest' -H 'mweibo-pwa: 1' -H 'accept-encoding: gzip, deflate, br' -H 'cookie: _T_WM=17718123560; MLOGIN=0; WEIBOCN_FROM=1110003030; XSRF-TOKEN=73103e; M_WEIBOCN_PARAMS=luicode%3D10000011%26lfid%3D231583%26fid%3D106003type%253D25%2526t%253D3%2526disable_hot%253D1%2526filter_type%253Drealtimehot%26uicode%3D10000011' -H 'pragma: no-cache' -H 'user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1' -H 'accept: application/json, text/plain, */*' -H 'cache-control: no-cache' -H 'authority: m.weibo.cn' -H 'referer: https://m.weibo.cn/p/index?containerid=106003type%3D25%26t%3D3%26disable_hot%3D1%26filter_type%3Drealtimehot&title=%E5%BE%AE%E5%8D%9A%E7%83%AD%E6%90%9C&extparam=pos%3D0_0%26mi_cid%3D100103%26cate%3D10103%26filter_type%3Drealtimehot%26c_type%3D30%26display_time%3D1575949167&luicode=10000011&lfid=231583' -H 'sec-fetch-site: same-origin' --compressed
+GET https://m.weibo.cn/api/container/getIndex?containerid=106003type%3D25%26t%3D3%26disable_hot%3D1%26filter_type%3Drealtimehot&title=%E5%BE%AE%E5%8D%9A%E7%83%AD%E6%90%9C&extparam=pos%3D0_0%26mi_cid%3D100103%26cate%3D10103%26filter_type%3Drealtimehot%26c_type%3D30%26display_time%3D1575949167&luicode=10000011&lfid=231583
+#sec-fetch-mode: cors
+#x-xsrf-token: 73103e
+#accept-language: zh-CN,zh;q=0.9
+#x-requested-with: XMLHttpRequest
+#mweibo-pwa: 1
+#accept-encoding: gzip, deflate, br
+#cookie: _T_WM=17718123560; MLOGIN=0; WEIBOCN_FROM=1110003030; XSRF-TOKEN=73103e; M_WEIBOCN_PARAMS=luicode%3D10000011%26lfid%3D231583%26fid%3D106003type%253D25%2526t%253D3%2526disable_hot%253D1%2526filter_type%253Drealtimehot%26uicode%3D10000011
+#pragma: no-cache
+#user-agent: Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+#accept: application/json, text/plain, */*
+cache-control: no-cache
+#authority: m.weibo.cn
+#referer: https://m.weibo.cn/p/index?containerid=106003type%3D25%26t%3D3%26disable_hot%3D1%26filter_type%3Drealtimehot&title=%E5%BE%AE%E5%8D%9A%E7%83%AD%E6%90%9C&extparam=pos%3D0_0%26mi_cid%3D100103%26cate%3D10103%26filter_type%3Drealtimehot%26c_type%3D30%26display_time%3D1575949167&luicode=10000011&lfid=231583
+#sec-fetch-site: same-origin
+
+###
+

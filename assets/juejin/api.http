@@ -1,0 +1,38 @@
+# curl 'https://web-api.juejin.im/query' -H 'Connection: keep-alive' -H 'Pragma: no-cache' -H 'Cache-Control: no-cache' -H 'X-Legacy-Device-Id: ' -H 'Origin: https://juejin.im' -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36' -H 'X-Legacy-Token: ' -H 'Content-Type: application/json' -H 'X-Legacy-Uid: ' -H 'X-Agent: Juejin/Web' -H 'Accept: */*' -H 'Sec-Fetch-Site: same-site' -H 'Sec-Fetch-Mode: cors' -H 'Referer: https://juejin.im/welcome/frontend' -H 'Accept-Encoding: gzip, deflate, br' -H 'Accept-Language: zh-CN,zh;q=0.9' --data-binary '{"operationName":"","query":"","variables":{"tags":[],"category":"5562b415e4b00c57d9b94ac8","first":20,"after":"","order":"POPULAR"},"extensions":{"query":{"id":"653b587c5c7c8a00ddf67fc66f989d42"}}}' --compressed
+POST https://web-api.juejin.im/query
+#Connection: keep-alive
+#Pragma: no-cache
+#Cache-Control: no-cache
+#X-Legacy-Device-Id:
+#Origin: https://juejin.im
+#User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36
+#X-Legacy-Token:
+#X-Legacy-Uid:
+X-Agent: Juejin/Web
+#Accept: */*
+#Sec-Fetch-Site: same-site
+#Sec-Fetch-Mode: cors
+#Referer: https://juejin.im/welcome/frontend
+#Accept-Encoding: gzip, deflate, br
+#Accept-Language: zh-CN,zh;q=0.9
+Content-Type: application/json
+
+{
+  "operationName": "",
+  "query": "",
+  "variables": {
+    "tags": [],
+    "category": "5562b415e4b00c57d9b94ac8",
+    "first": 20,
+    "after": "",
+    "order": "POPULAR"
+  },
+  "extensions": {
+    "query": {
+      "id": "653b587c5c7c8a00ddf67fc66f989d42"
+    }
+  }
+}
+
+###
+

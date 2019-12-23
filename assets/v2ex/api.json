@@ -1,0 +1,38 @@
+[
+  {
+    "title": "技术",
+    "api": "https://www.v2ex.com/?tab=tech"
+  },
+  {
+    "title": "创意",
+    "api": "https://www.v2ex.com/?tab=creative"
+  },
+  {
+    "title": "好玩",
+    "api": "https://www.v2ex.com/?tab=play"
+  },
+  {
+    "title": "Apple",
+    "api": "https://www.v2ex.com/?tab=apple"
+  },
+  {
+    "title": "酷工作",
+    "api": "https://www.v2ex.com/?tab=jobs"
+  },
+  {
+    "title": "交易",
+    "api": "https://www.v2ex.com/?tab=deals"
+  },
+  {
+    "title": "城市",
+    "api": "https://www.v2ex.com/?tab=city"
+  },
+  {
+    "title": "问与答",
+    "api": "https://www.v2ex.com/?tab=qna"
+  },
+  {
+    "title": "最热",
+    "api": "https://www.v2ex.com/?tab=hot"
+  }
+]
